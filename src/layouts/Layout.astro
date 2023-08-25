@@ -1,0 +1,51 @@
+---
+import Footer from "../components/Footer.astro";
+import Hero from "../components/landing/Hero.astro";
+
+import Nav from "../components/Nav.astro";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Astro Landing - {title}</title>
+  </head>
+  <!-- Excluí imports para saltar los styles del body  -->
+  <Nav />
+  <Hero />
+  <body>
+    <main class="mx-10 pt-0">
+      <slot />
+
+      <Footer />
+    </main>
+  </body>
+  <!--  Estilo principal del body -->
+
+  <!-- fuentes añadidas   -->
+  <style is:global>
+    body {
+      background: #ffff;
+      color: rgb(0, 0, 0);
+    }
+
+    @font-face {
+      font-family: "BebasNeue";
+      src: url("../fonts/BebasNeue-Regular.ttf");
+      font-weight: bold;
+    }
+    @font-face {
+      font-family: "RobotoCondensed-Regular";
+      src: url("../fonts/RobotoCondensed-Regular.ttf");
+      font-weight: bold;
+    }
+  </style>
+</html>

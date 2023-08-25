@@ -1,0 +1,126 @@
+<header>
+  <!-- Ccabecera del nav  -->
+  <nav
+    class="mx-auto px-9 py-2 p-0 bg-white md:flex md:items-center md:justify-between"
+  >
+    <div class="flex justify-between items-center">
+      <!-- logo del gimnasio responsivo   -->
+      <span class="text-2xl font-title cursor-pointer">
+        <img
+          src="../images/Activ_logo.png"
+          class="h-20 inline hover:opacity-75 duration-500 s,"
+          alt="Actyv logo"
+        />
+      </span>
+      <!--  menú hamburguesa -->
+      <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+        <button id="boton-nav">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 fill-current text-zinc-800"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"
+            ></path>
+          </svg>
+        </button>
+      </span>
+    </div>
+    <!-- Lista de nav tamaño lg  -->
+    <ul
+      class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] text-xl transition-all ease-in duration-500 font-title"
+      id="menu-nav-1"
+    >
+      <li class="mx-6 my-6 md:my-0">
+        <a
+          href="#"
+          class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
+          >Nuestro programa</a
+        >
+      </li>
+      <li class="mx-6 my-6 md:my-0">
+        <a
+          href="#"
+          class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
+          >Entrenamientos</a
+        >
+      </li>
+      <li class="mx-6 my-6 md:my-0">
+        <a
+          href="#"
+          class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
+          >Ruta inicial</a
+        >
+      </li>
+      <li class="mx-6 my-6 md:my-0">
+        <a
+          href="#"
+          class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
+          >Equipo</a
+        >
+      </li>
+      <li class="mx-6 my-6 md:my-0">
+        <a
+          href="#"
+          class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
+          >Precios</a
+        >
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a
+          href="#"
+          class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
+          >Contacto</a
+        >
+      </li>
+      <li class="mx-6 my-6 md:my-0">
+        <a
+          href="#"
+          class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
+          >Horarios</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <!-- Menú desplegable del nav  -->
+  <nav class="hidden md:hidden" id="mobile-menu">
+    <ul class="space-y-1 px-4 pb-1 pt-4 text-lg bg-white text-black font-title">
+      <li>
+        <a href="" class="block rounded-md px-3 py-2">Nuestro programa</a>
+      </li>
+      <li>
+        <a href="" class="block rounded-md px-3 py-2">Entrenamientos</a>
+      </li>
+      <li>
+        <a href="" class="block rounded-md px-3 py-2">Ruta inicial</a>
+      </li>
+      <li>
+        <a href="" class="block rounded-md px-3 py-2">Equipo</a>
+      </li>
+      <li>
+        <a href="" class="block rounded-md px-3 py-2">Precio</a>
+      </li>
+      <li>
+        <a href="" class="block rounded-md px-3 py-2">Contacto</a>
+      </li>
+      <li>
+        <a href="" class="block rounded-md px-3 py-2">Horarios</a>
+      </li>
+    </ul>
+  </nav>
+  <!--  script del menú de navegación desplegable  -->
+  <script>
+    const botonHamburguesa = document.getElementById("boton-nav");
+    const navLinks = document.getElementById("mobile-menu");
+
+    botonHamburguesa.addEventListener("click", () => {
+      navLinks.classList.toggle("hidden");
+    });
+  </script>
+</header>
