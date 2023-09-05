@@ -5,13 +5,16 @@
   >
     <div class="flex justify-between items-center">
       <!-- logo del gimnasio responsivo   -->
-      <span class="text-2xl font-title cursor-pointer">
+      <a
+        class="text-2xl font-title cursor-pointer"
+        href="https://activ-gym-v2.netlify.app"
+      >
         <img
           src="../images/Activ_logo.png"
-          class="h-20 inline hover:opacity-75 duration-500 s,"
+          class="h-20 inline hover:opacity-75 duration-500"
           alt="Actyv logo"
         />
-      </span>
+      </a>
       <!--  menú hamburguesa -->
       <span class="text-3xl cursor-pointer mx-2 md:hidden block">
         <button id="boton-nav">
@@ -39,49 +42,49 @@
     >
       <li class="mx-6 my-6 md:my-0">
         <a
-          href="#"
+          href="#our-program-section"
           class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
           >Nuestro programa</a
         >
       </li>
       <li class="mx-6 my-6 md:my-0">
         <a
-          href="#"
+          href="#training-section"
           class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
           >Entrenamientos</a
         >
       </li>
       <li class="mx-6 my-6 md:my-0">
         <a
-          href="#"
+          href="#video-section"
           class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
           >Ruta inicial</a
         >
       </li>
       <li class="mx-6 my-6 md:my-0">
         <a
-          href="#"
+          href="#trainer-section"
           class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
           >Equipo</a
         >
       </li>
       <li class="mx-6 my-6 md:my-0">
         <a
-          href="#"
+          href="#prices-section"
           class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
           >Precios</a
         >
       </li>
       <li class="mx-4 my-6 md:my-0">
         <a
-          href="#"
+          href="#contact-section"
           class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
           >Contacto</a
         >
       </li>
       <li class="mx-6 my-6 md:my-0">
         <a
-          href="#"
+          href="#schedule-section"
           class="text-zinc-800 hover:text-red-600 duration-500 link-hover"
           >Horarios</a
         >
@@ -92,25 +95,35 @@
   <nav class="hidden md:hidden" id="mobile-menu">
     <ul class="space-y-1 px-4 pb-1 pt-4 text-lg bg-white text-black font-title">
       <li>
-        <a href="" class="block rounded-md px-3 py-2">Nuestro programa</a>
+        <a href="#our-program-section" class="block rounded-md px-3 py-2"
+          >Nuestro programa</a
+        >
       </li>
       <li>
-        <a href="" class="block rounded-md px-3 py-2">Entrenamientos</a>
+        <a href="#training-section" class="block rounded-md px-3 py-2"
+          >Entrenamientos</a
+        >
       </li>
       <li>
-        <a href="" class="block rounded-md px-3 py-2">Ruta inicial</a>
+        <a href="#video-section" class="block rounded-md px-3 py-2"
+          >Ruta inicial</a
+        >
       </li>
       <li>
-        <a href="" class="block rounded-md px-3 py-2">Equipo</a>
+        <a href="#trainer-section" class="block rounded-md px-3 py-2">Equipo</a>
       </li>
       <li>
-        <a href="" class="block rounded-md px-3 py-2">Precio</a>
+        <a href="#prices-section" class="block rounded-md px-3 py-2">Precio</a>
       </li>
       <li>
-        <a href="" class="block rounded-md px-3 py-2">Contacto</a>
+        <a href="#contact-section" class="block rounded-md px-3 py-2"
+          >Contacto</a
+        >
       </li>
       <li>
-        <a href="" class="block rounded-md px-3 py-2">Horarios</a>
+        <a href="#schedule-section" class="block rounded-md px-3 py-2"
+          >Horarios</a
+        >
       </li>
     </ul>
   </nav>
@@ -122,5 +135,61 @@
     botonHamburguesa.addEventListener("click", () => {
       navLinks.classList.toggle("hidden");
     });
+
+    // script para el scroll del botón de "equipo"
+
+    function scrollToSection(event, sectionId) {
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    }
+
+    //Our program section
+    document
+      .getElementById("our-program-section")
+      .addEventListener("click", function (event) {
+        scrollToSection(event, "our-program-section");
+      });
+    //Training section
+    document
+      .getElementById("training-section")
+      .addEventListener("click", function (event) {
+        scrollToSection(event, "training-section");
+      });
+    //Video section
+    document
+      .getElementById("video-section")
+      .addEventListener("click", function (event) {
+        scrollToSection(event, "video-section");
+      });
+    //Trainer section
+    document
+      .getElementById("trainer-section")
+      .addEventListener("click", function (event) {
+        scrollToSection(event, "trainer-section");
+      });
+    //Prices section
+    document
+      .getElementById("prices-section")
+      .addEventListener("click", function (event) {
+        scrollToSection(event, "prices-section");
+      });
+    //Contact section
+    document
+      .getElementById("contact-section")
+      .addEventListener("click", function (event) {
+        scrollToSection(event, "contact-section");
+      });
+    //Schedule section
+    document
+      .getElementById("schedule-section")
+      .addEventListener("click", function (event) {
+        scrollToSection(event, "schedule-section");
+      });
+
+    // Agrega más enlaces con eventos similares para otras secciones
   </script>
 </header>

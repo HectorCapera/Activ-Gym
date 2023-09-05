@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Hero from "../components/landing/Hero.astro";
+import Whatsapp from "../components/Whatsapp.astro";
 
 import Nav from "../components/Nav.astro";
 interface Props {
@@ -15,13 +16,14 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Astro Landing - {title}</title>
+    <link rel="icon" href="/images/Activ_logo.png" type="image/png" />
+    <title>{title}</title>
   </head>
   <!-- Excluí imports para saltar los styles del body  -->
   <Nav />
   <Hero />
   <body>
+    <Whatsapp />
     <main class="mx-10 pt-0">
       <slot />
 
